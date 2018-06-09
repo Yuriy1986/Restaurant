@@ -9,5 +9,6 @@ Restaurant (ASP.NET MVC 5)
 •	AutoMapper
 •	Autofac
 •	bootstrap
+
 Проект выполнен в трехуровневой архитектуре.
 
