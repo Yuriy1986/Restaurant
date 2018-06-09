@@ -1,0 +1,13 @@
+﻿@{
+    ViewBag.Title = "Главная";
+}
+
+<br />
+<div>
+    @Html.ActionLink("Получить список заказов", "GetAllOrders", null,
+    new
+    {
+        @class = "btn btn-primary",
+        title = "Получить список заказов"
+    })
+</div>

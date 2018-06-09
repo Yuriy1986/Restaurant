@@ -1,0 +1,85 @@
+﻿@model IEnumerable<Restaurant.WEB.Models.OrderViewModel>
+
+@{
+    ViewBag.Title = "Список заказов";
+}
+
+<h2>Список заказов</h2>
+
+<table class="table table-hover table-bordered">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.OrderDateTime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Dishes)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OrderPrice)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NumberTable)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Executed)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Paid)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.Chefs)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Waiters)
+            </th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OrderDateTime)
+                </td>
+                <td>
+                    @foreach (var dish in item.Dishes)
+                    {
+                        <div>@dish</div>
+                    }
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OrderPrice)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NumberTable)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Executed)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Paid)
+                </td>
+                <td>
+                    @foreach (var chef in item.Chefs)
+                    {
+                        <div>@chef</div>
+                    }
+                </td>
+                <td>
+                    @foreach (var waiter in item.Waiters)
+                    {
+                        <div>@waiter</div>
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<br />
+<div>
+    @Html.ActionLink("На главную страницу ->", "Index")
+</div>
