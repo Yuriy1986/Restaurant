@@ -23,17 +23,9 @@ namespace Restaurant.WEB
             BundleConfig.RegisterBundles(BundleTable.Bundles);
 
             var builder = new ContainerBuilder();
-
-            // Register your MVC controllers. (MvcApplication is the name of
-            // the class in Global.asax.)
-            builder.RegisterControllers(typeof(MvcApplication).Assembly);//.PropertiesAutowired();   
-
+            builder.RegisterControllers(typeof(MvcApplication).Assembly);
             builder.RegisterModule(new ServiceModule("RestaurantConnection", builder));
-
             builder.RegisterModule(new AutofacModule(builder));
-
-            
-            // Set the dependency resolver to be Autofac.
             var container = builder.Build();
             DependencyResolver.SetResolver(new AutofacDependencyResolver(container));
         }

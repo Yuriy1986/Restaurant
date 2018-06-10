@@ -20,7 +20,7 @@ namespace Restaurant.DAL.Entities
 
         public decimal Price { get; set; }
 
-        public virtual ICollection<Order> Orders { get; set; }
+        public ICollection<Order> Orders { get; set; }
 
         public Dish()
         {

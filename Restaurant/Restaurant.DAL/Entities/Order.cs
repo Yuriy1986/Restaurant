@@ -21,11 +21,11 @@ namespace Restaurant.DAL.Entities
 
         public bool Paid { get; set; }
 
-        public virtual ICollection<Dish> Dishes { get; set;}
+        public ICollection<Dish> Dishes { get; set;}
 
-        public virtual ICollection<Chef> Chefs { get; set; }
+        public ICollection<Chef> Chefs { get; set; }
 
-        public virtual ICollection<Waiter> Waiters { get; set; }
+        public ICollection<Waiter> Waiters { get; set; }
 
         public Order()
         {

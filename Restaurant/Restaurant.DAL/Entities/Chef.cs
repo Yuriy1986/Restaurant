@@ -10,7 +10,7 @@ namespace Restaurant.DAL.Entities
     [Table("Chefs")]
     public class Chef : Employee
     {
-        public virtual ICollection<Order> Orders { get; set; }
+        public ICollection<Order> Orders { get; set; }
 
         public Chef()
         {

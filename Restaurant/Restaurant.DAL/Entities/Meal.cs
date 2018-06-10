@@ -14,7 +14,7 @@ namespace Restaurant.DAL.Entities
         [Required]
         public string NameMeal { get; set; }
 
-        public virtual ICollection<Dish> Dishes { get; set; }
+        public ICollection<Dish> Dishes { get; set; }
 
         public Meal()
         {
