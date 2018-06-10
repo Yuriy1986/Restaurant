@@ -5,13 +5,13 @@ Restaurant (ASP.NET MVC 5)
 между уровнями применен AutoMapper, для установки зависимостей применен Autofac.
 
 Инструменты и технологии:
-- MS Visual Studio 2015 (framework 4.6.1)
+- MS Visual Studio 2015 (Framework 4.6.1)
 - MS SQL Server 2016 (в MS Visual Studio 2015)
 - MVC 5 with Razor
 - Entity Framework
 - AutoMapper
 - Autofac
-- bootstrap
+- Bootstrap
 
 Проект выполнен в трехуровневой архитектуре.
 
