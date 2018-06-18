@@ -15,11 +15,9 @@ namespace Restaurant.BLL.Infrastructure
 {
     public class ServiceModule : Module
     {
-        private string connectionString;
         public ServiceModule(string connection, ContainerBuilder builder)
         {
-            connectionString = connection;
-            builder.RegisterType<UnitOfWork>().As<IUnitOfWork>().WithParameter("connectionString", connectionString);
+            builder.RegisterType<UnitOfWork>().As<IUnitOfWork>().WithParameter("connectionString", connection);
         }
     }
 }
